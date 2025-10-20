@@ -21,6 +21,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .grid {
@@ -47,6 +48,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .trailer {
@@ -59,15 +61,21 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-.cast {
+.team {
     height: 50vh;
     padding: 50px 20px;
     display: flex;
+    background: url('assets/section_images/team_image.webp');
     justify-content: center;
     align-items: center;
     background-color: #ffffff;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .reviews {
@@ -80,18 +88,30 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .contact {
     height: 50vh;
     padding: 50px 20px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: url('assets/section_images/contact_image.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.contact a {
+    font-family: 'Inter', sans-serif;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 20px;
 }
 
 h1 {
