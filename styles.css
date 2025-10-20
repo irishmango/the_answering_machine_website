@@ -92,7 +92,7 @@ body {
 }
 
 .contact {
-    height: 50vh;
+    height: 100vh;
     padding: 50px 20px;
     display: flex;
     flex-direction: column;
