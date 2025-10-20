@@ -65,17 +65,21 @@ body {
 }
 
 .team {
-    height: 50vh;
-    padding: 50px 20px;
+    min-height: 100vh;
+    padding: 100px 20px 50px;
     display: flex;
-    background: url('assets/section_images/team_image.webp');
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background: url('assets/section_images/reviews_image.webp') center/cover no-repeat fixed;
+}
+
+.production-heading {
+    margin-left: 100px;
+}
+
+.production-and-cast {
+    margin-left: 140px;
 }
 
 .reviews {
@@ -99,7 +103,7 @@ body {
     justify-content: center;
     align-items: center;
     background: url('assets/section_images/contact_image.webp');
-    background-size: cover;
+    background-size: 130%;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -125,6 +129,12 @@ h2 {
     font-size: 48px;
     font-weight: 300;
     margin-bottom: 40px;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
 }
 
 .menu {
@@ -179,10 +189,14 @@ h2 {
 .video-wrapper {
     position: relative;
     padding-bottom: 56.25%;
-    /* 16:9 aspect ratio */
     height: 0;
     overflow: hidden;
     max-width: 100%;
+}
+
+video {
+    border: 1px solid #ffffff;
+    border-radius: 8px;
 }
 
 .video-wrapper iframe,
