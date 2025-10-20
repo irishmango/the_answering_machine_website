@@ -1,0 +1,101 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div>
+        <section class="landing">
+            <div class="menu">
+                <div class="menu-item">Plot</div>
+                <div class="menu-item">Trailer</div>
+                <div class="menu-item">Cast</div>
+                <div class="menu-item">Reviews</div>
+                <div class="menu-item">Contact</div>
+            </div>
+            <h1>THE ANSWERING MACHINE</h1>
+            <div class="grid">
+                <img src="assets/award_images/bff_amsterdam_film_festival.webp" alt="">
+                <img src="assets/award_images/bd_amsterdam_film_festival.webp" alt="">
+                <img src="assets/award_images/bd_mannheim_film_festival.webp" alt="">
+                <img src="assets/award_images/ba_mannheim_film_festival.webp" alt="">
+                <img src="assets/award_images/ba_palermo_film_festival.webp" alt="">
+                <img src="assets/award_images/ba_mannheim_film_festival.webp" alt="">
+                <img src="assets/award_images/bc_new_york_film_festival.webp" alt="">
+                <img src="assets/award_images/os_north_film_festival.webp" alt="">
+                <img src="assets/award_images/os_starlight_film_festival.webp" alt="">
+                <img src="assets/award_images/os_amsterdam_film_festival.webp" alt="">
+            </div>
+        </section>
+
+        <section class="plot">
+            <h2>Plot</h2>
+            <div class="plot-text">
+                <p class="first-para">The Answering Machine follows a young opera singer from Berlin as she
+                    struggles
+                    beneath
+                    the weight of her
+                    family’s
+                    expectations, the unforgiving demands of the opera world, and the darkness festering within her own
+                    psyche. What begins
+                    as a pursuit of perfection becomes a harrowing descent into fear, self-doubt, and fractured
+                    identity. As
+                    her sense of
+                    reality unravels, music — once her refuge — morphs into both her torment and salvation.</p>
+                <div class="second-para">
+                    <p>A singer..betrayed by music.</p>
+                    <p>A silent scream.</p>
+                    <p>A nightmare.</p>
+                </div>
+                <div class="third-para">
+                    <p>A singer consumed by her own sound.</p>
+                </div>
+                <div class="fourth-para">
+                    <p>Untuned</p>
+                    <p>Unvoiced</p>
+                    <p>Uncomposed</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="trailer">
+            <video controls width="800">
+                <source src="assets/trailer/the_answering_machine_trailer.webm" type="video/webm">
+                <source src="assets/trailer/the_answering_machine_trailer.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <section class="cast">
+            <h2>Cast</h2>
+        </section>
+
+        <section class="reviews">
+            <h2>Reviews</h2>
+        </section>
+
+        <section class="contact">
+            <h2>Contact</h2>
+        </section>
+
+    </div>
+
+
+
+    <!-- <div id="viewport-size"></div> -->
+    <script>
+        const sizeDisplay = document.getElementById('viewport-size');
+        function updateSize() {
+            sizeDisplay.textContent = `${window.innerWidth}px × ${window.innerHeight}px`;
+        }
+        window.addEventListener('resize', updateSize);
+        updateSize();
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

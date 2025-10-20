@@ -1,0 +1,172 @@
+/* Load Libre Baskerville from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+/* Load Inter from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Libre Baskerville', serif;
+    color: #ffffff;
+}
+
+.landing {
+    height: 100vh;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('assets/section_images/hero_image.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    grid-template-rows: repeat(2, 66px);
+    gap: 60px;
+    padding: 40px 20px;
+}
+
+.grid>* {
+    width: 100px;
+    height: 66px;
+}
+
+.plot {
+    height: 60vh;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('assets/section_images/plot_image.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.trailer {
+    height: 75vh;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('assets/section_images/trailer_image.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cast {
+    height: 50vh;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.reviews {
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background: url('assets/section_images/reviews_image.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contact {
+    height: 50vh;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('assets/section_images/contact_image.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    font-size: 64px;
+    font-weight: 100;
+    letter-spacing: 1.5px;
+    margin-top: 280px;
+}
+
+h2 {
+    font-size: 48px;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.menu {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu-item {
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+    padding: 10px 32px;
+    color: #B6B2B1;
+}
+
+.menu-item:hover {
+    color: #ffffff;
+}
+
+.plot-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.first-para {
+    padding: 0 300px;
+}
+
+.second-para p {
+    margin: 8px;
+    text-align: center;
+
+}
+
+.fourth-para p {
+    margin: 8px;
+    text-align: center;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.video-wrapper iframe,
+.video-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
