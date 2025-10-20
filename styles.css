@@ -124,7 +124,10 @@ h2 {
     cursor: pointer;
     padding: 10px 32px;
     color: #B6B2B1;
+    text-decoration: none;
 }
+
+
 
 .menu-item:hover {
     color: #ffffff;
