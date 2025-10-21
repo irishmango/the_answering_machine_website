@@ -1,0 +1,117 @@
+/* MD: 768–1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+    h1 {
+        font-size: 2.6rem;
+        margin-top: 240px;
+        letter-spacing: 1.2px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(5, 90px);
+        grid-template-rows: repeat(2, 56px);
+        gap: 40px;
+        padding: 60px 20px;
+    }
+
+    .grid>* {
+        width: 90px;
+        height: 56px;
+    }
+
+    .first-para {
+        padding: 0 60px;
+    }
+
+    .trailer video {
+        width: 640px;
+        max-width: 90%;
+        height: auto;
+    }
+
+    .plot {
+        height: auto;
+        min-height: 60vh;
+    }
+
+    .trailer {
+        height: auto;
+        min-height: 70vh;
+    }
+
+    .team {
+        height: auto;
+        min-height: 95vh;
+    }
+
+    .reviews {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .contact {
+        height: auto;
+        min-height: 90vh;
+    }
+
+    .reviews-content {
+        font-size: 14px;
+        letter-spacing: 0.2px;
+        margin-bottom: 24px;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 80px;
+    }
+
+    .reviews-container {
+        width: 100%;
+    }
+
+    .menu-item {
+        font-size: 14px;
+    }
+
+    .team {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .production-heading {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .production-and-cast {
+        margin-left: 0px;
+    }
+
+    .production-team {
+        text-align: center;
+    }
+
+    .cast {
+        text-align: center;
+    }
+
+    .contact {
+        height: auto;
+        min-height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+        background-color: #000;
+    }
+
+    /* MD: use inline menu, hide hamburger */
+    .menu-button {
+        display: none;
+    }
+
+    .menu-links {
+        display: flex;
+        position: static;
+        background: none;
+        border: 0;
+        padding: 0;
+        gap: 20px;
+    }
+}

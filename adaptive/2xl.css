@@ -1,0 +1,73 @@
+/* 2XL: >= 1536px */
+@media (min-width: 1536px) {
+    h1 {
+        font-size: 4.25rem;
+        margin-top: 300px;
+        letter-spacing: 1.6px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(5, 120px);
+        grid-template-rows: repeat(2, 86px);
+        gap: 64px;
+        padding: 80px 24px;
+    }
+
+    .grid>* {
+        width: 120px;
+        height: 86px;
+    }
+
+    .first-para {
+        padding: 0 300px;
+    }
+
+    .trailer video {
+        width: 900px;
+        max-width: 90%;
+        height: auto;
+    }
+
+    .menu-item {
+        font-size: 18px;
+    }
+
+    /* Adaptive section heights */
+    .plot {
+        height: auto;
+        min-height: 75vh;
+    }
+
+    .trailer {
+        height: auto;
+        min-height: 80vh;
+    }
+
+    .team {
+        height: auto;
+        min-height: 110vh;
+    }
+
+    .reviews {
+        height: auto;
+        min-height: 120vh;
+    }
+
+    .contact {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .menu-button {
+        display: none;
+    }
+
+    .menu-links {
+        display: flex;
+        position: static;
+        background: none;
+        border: 0;
+        padding: 0;
+        gap: 20px;
+    }
+}

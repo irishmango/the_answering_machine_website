@@ -21,10 +21,12 @@ backToTop.addEventListener('click', () => {
     const closeMenu = () => {
         menu.classList.remove('open');
         toggleBtn.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('menu-open');
     };
     const openMenu = () => {
         menu.classList.add('open');
         toggleBtn.setAttribute('aria-expanded', 'true');
+        document.body.classList.add('menu-open');
     };
     const toggleMenu = () => {
         if (menu.classList.contains('open')) {

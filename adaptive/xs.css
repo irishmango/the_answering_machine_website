@@ -1,0 +1,193 @@
+/* XS: <= 479px */
+@media (max-width: 479px) {
+    body.menu-open {
+        overflow: hidden;
+        height: 100vh;
+    }
+
+    /* Hamburger menu for XS */
+    .menu {
+        position: absolute;
+        top: 16px;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 12px;
+    }
+
+    .menu-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.4);
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        position: relative;
+        z-index: 1002;
+        /* stays above overlay */
+    }
+
+    .menu-links {
+        display: none;
+        position: fixed;
+        inset: 0;
+        /* top:0 right:0 bottom:0 left:0 */
+        background: rgba(0, 0, 0, 0.9);
+        backdrop-filter: blur(2px);
+        z-index: 1000;
+        padding: 24px;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .menu.open .menu-links {
+        display: flex;
+    }
+
+    .menu-item {
+        display: block;
+        text-align: center;
+        padding: 12px 16px;
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+        margin-top: 160px;
+        letter-spacing: 1px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 24px;
+    }
+
+    /* Zoom hero background for extra-small screens */
+    .landing {
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    .grid {
+        grid-template-columns: repeat(5, 50px);
+        grid-template-rows: repeat(2, 34px);
+        gap: 10px;
+        padding: 40px 16px;
+    }
+
+    .grid>* {
+        width: 50px;
+        height: 34px;
+    }
+
+    .plot-text p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .first-para {
+        padding: 0 16px;
+    }
+
+    .trailer video {
+        width: 320px;
+        max-width: 92vw;
+        height: auto;
+    }
+
+    .reviews {
+        height: auto;
+    }
+
+    .menu-item {
+        font-size: 16px;
+    }
+
+    /* Adaptive section heights */
+    .plot {
+        height: auto;
+        min-height: 70vh;
+    }
+
+    .trailer {
+        height: auto;
+        min-height: 60vh;
+    }
+
+    .team {
+        height: auto;
+        min-height: 80vh;
+    }
+
+    .reviews {
+        height: auto;
+        min-height: 90vh;
+    }
+
+    .contact {
+        height: auto;
+        min-height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+        background-color: #000;
+    }
+
+    .contact a {
+        font-size: 14px;
+    }
+
+    .team {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .production-heading {
+        text-align: center;
+        margin-left: 0;
+        font-size: 1.4rem;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    .production-and-cast {
+        margin-left: 0;
+        gap: 20px;
+    }
+
+    .production-team,
+    .cast {
+        text-align: center;
+    }
+
+    .production-team p,
+    .cast p {
+        font-size: 12px;
+    }
+
+    .reviews-content {
+        font-size: 13px;
+        letter-spacing: 0.2px;
+        margin-bottom: 16px;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 40px;
+    }
+
+    .reviews-container {
+        width: 100%;
+    }
+}

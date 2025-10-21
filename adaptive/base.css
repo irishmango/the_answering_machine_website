@@ -1,0 +1,6 @@
+/* Adaptive base and variables */
+:root {
+    --container-padding: 16px;
+    --content-max-width: 1200px;
+    --grid-gap: 20px;
+}
