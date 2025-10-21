@@ -1,3 +1,45 @@
+// Device detection: flag mobile vs desktop and expose helpers
+(function () {
+    function isMobileDevice() {
+        try {
+            // Chromium User-Agent Client Hints
+            if (navigator.userAgentData && typeof navigator.userAgentData.mobile === 'boolean') {
+                return navigator.userAgentData.mobile;
+            }
+        } catch (_) { /* noop */ }
+
+        // Fallback to UA sniffing
+        const ua = (navigator.userAgent || navigator.vendor || window.opera || '').toLowerCase();
+        const uaMobile = /android|iphone|ipad|ipod|blackberry|bb10|silk|kindle|iemobile|opera mini|mobile/i.test(ua);
+
+        // Heuristic: coarse pointer devices mobile/tablets
+        const coarse = typeof window.matchMedia === 'function' && window.matchMedia('(pointer: coarse)').matches;
+
+        return uaMobile || coarse;
+    }
+
+    function flagDevice() {
+        const mobile = isMobileDevice();
+        document.documentElement.classList.toggle('is-mobile', mobile);
+        document.documentElement.classList.toggle('is-desktop', !mobile);
+        document.documentElement.dataset.device = mobile ? 'mobile' : 'desktop';
+        window.IS_MOBILE = mobile;
+        return mobile;
+    }
+
+    // Initial flag + lightweight updates on viewport changes
+    flagDevice();
+    let t;
+    window.addEventListener('resize', () => {
+        clearTimeout(t);
+        t = setTimeout(flagDevice, 150);
+    });
+    window.addEventListener('orientationchange', flagDevice);
+
+    // Optional export
+    window.isMobileDevice = isMobileDevice;
+})();
+
 // Back to Top Button
 const backToTop = document.getElementById('backToTop');
 window.addEventListener('scroll', () => {
