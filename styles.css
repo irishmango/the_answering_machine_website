@@ -26,15 +26,15 @@ body {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(5, 100px);
-    grid-template-rows: repeat(2, 66px);
+    grid-template-columns: repeat(5, 110px);
+    grid-template-rows: repeat(2, 76px);
     gap: 60px;
-    padding: 40px 20px;
+    padding: 60px 20px;
 }
 
 .grid>* {
-    width: 100px;
-    height: 66px;
+    width: 110px;
+    height: 76px;
 }
 
 .plot {
@@ -51,6 +51,30 @@ body {
     background-attachment: fixed;
 }
 
+.plot-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.first-para {
+    padding: 0 300px;
+}
+
+.second-para p {
+    margin: 8px;
+    text-align: center;
+
+}
+
+.fourth-para p {
+    margin: 8px;
+    text-align: center;
+}
+
 .trailer {
     height: 75vh;
     padding: 50px 20px;
@@ -65,34 +89,69 @@ body {
 }
 
 .team {
-    min-height: 100vh;
+    height: 75vh;
     padding: 100px 20px 50px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    background: url('assets/section_images/reviews_image.webp') center/cover no-repeat fixed;
+    background: url('assets/section_images/team_image.webp') center/cover no-repeat fixed;
 }
 
 .production-heading {
-    margin-left: 100px;
-}
-
-.production-and-cast {
     margin-left: 140px;
 }
 
-.reviews {
-    height: 75vh;
+.production-and-cast {
+    font-family: 'Inter', sans-serif;
     display: flex;
+    flex-direction: row;
+    margin-left: 140px;
+    gap: 140px;
+}
+
+.production-team span {
+    font-style: italic;
+}
+
+.reviews {
+    height: 120vh;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px 20px;
     background: url('assets/section_images/reviews_image.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+.reviews-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+.reviews-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 8px;
+    flex-direction: column;
+    width: 40%;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.review-author {
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    text-align: right;
+
+
 }
 
 .contact {
@@ -163,28 +222,7 @@ h3 {
     color: #ffffff;
 }
 
-.plot-text {
-    font-family: 'Inter', sans-serif;
-    font-weight: 300;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-.first-para {
-    padding: 0 300px;
-}
-
-.second-para p {
-    margin: 8px;
-    text-align: center;
-
-}
-
-.fourth-para p {
-    margin: 8px;
-    text-align: center;
-}
 
 .video-wrapper {
     position: relative;
@@ -229,4 +267,22 @@ video {
 #backToTop:hover {
     color: rgba(255, 255, 255, 1);
     transform: scale(1.1);
+}
+
+/* Debug: viewport size overlay */
+#viewport-size {
+    position: fixed;
+    left: 10px;
+    bottom: 8px;
+    z-index: 9999;
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0.2px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 6px 8px;
+    border-radius: 6px;
+    pointer-events: none;
+    user-select: none;
 }
