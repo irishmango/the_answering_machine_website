@@ -30,7 +30,7 @@
 @media (max-width: 767px),
 (pointer: coarse) {
     .legal-page {
-        background-attachment: scroll;
+        background-attachment: scroll !important;
     }
 
     /* On small screens: show only arrow icon, hide visible text but keep it accessible */
@@ -70,19 +70,46 @@
 /* Header row */
 .legal-header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
     margin-bottom: 16px;
+}
+
+.legal-header h1 {
+    margin-top: 8px;
 }
 
 .legal-header .back-link {
     color: #B6B2B1;
     text-decoration: none;
-    padding: 20px;
+    padding-top: 24px;
+    padding-left: 0;
+    margin-left: 0;
+    align-self: flex-start;
 }
 
 .legal-header .back-link:hover {
     color: #fff;
+}
+
+/* Prevent horizontal scrolling and constrain elements within the viewport */
+.legal-page,
+.legal-content,
+.legal-header {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.back-link .label {
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* Typography overrides scoped to legal page to avoid global h1 margin-top */
@@ -115,6 +142,10 @@
 @media (max-width: 399px) {
     .legal-content h1 {
         margin-top: 24px;
+    }
+
+    .legal-page {
+        width: 100svw;
     }
 }
 
@@ -156,4 +187,8 @@
     .legal-content h1 {
         margin-top: 84px;
     }
+}
+
+body {
+    overflow-x: hidden;
 }
