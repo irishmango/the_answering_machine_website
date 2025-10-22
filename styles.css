@@ -180,6 +180,7 @@ body {
 }
 
 h1 {
+    color: rgba(255, 255, 255, 0.8);
     font-size: 64px;
     font-weight: 100;
     letter-spacing: 1.5px;
@@ -287,4 +288,30 @@ video {
     border-radius: 6px;
     pointer-events: none;
     user-select: none;
+}
+
+/* Footer */
+.site-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 16px;
+    color: #B6B2B1;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.site-footer .footer-link {
+    color: #B6B2B1;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+}
+
+.site-footer .footer-link:hover {
+    color: #ffffff;
+}
+
+.site-footer .footer-sep {
+    opacity: 0.5;
 }

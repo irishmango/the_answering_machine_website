@@ -89,6 +89,8 @@
 
     .production-and-cast {
         margin-left: 0px;
+        flex-direction: column;
+        gap: 24px;
     }
 
     .production-team {
