@@ -59,21 +59,21 @@
     }
 
     h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         margin-top: 180px;
         letter-spacing: 1.1px;
     }
 
     .grid {
-        grid-template-columns: repeat(5, 70px);
-        grid-template-rows: repeat(2, 48px);
+        grid-template-columns: repeat(5, 60px);
+        grid-template-rows: repeat(2, 38px);
         gap: 20px;
         padding: 48px 20px;
     }
 
     .grid>* {
-        width: 70px;
-        height: 48px;
+        width: 60px;
+        height: 38px;
     }
 
     .first-para {
