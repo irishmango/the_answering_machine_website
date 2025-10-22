@@ -295,9 +295,8 @@ video {
 /* Footer */
 .site-footer {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 12px;
     padding: 20px 16px;
     color: #B6B2B1;
     background: rgba(0, 0, 0, 0.4);
@@ -314,6 +313,4 @@ video {
     color: #ffffff;
 }
 
-.site-footer .footer-sep {
-    opacity: 0.5;
-}
+/* .site-footer .footer-sep no longer used */
