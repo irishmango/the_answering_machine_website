@@ -164,6 +164,8 @@
     .reviews {
         height: auto;
         min-height: 100vh;
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
 
     .contact {
@@ -173,5 +175,10 @@
         background-position: center;
         background-attachment: scroll;
         background-color: #000;
+    }
+
+    #backToTop {
+        bottom: 20px;
+        right: 10px;
     }
 }

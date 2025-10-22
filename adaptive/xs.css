@@ -131,6 +131,8 @@
     .reviews {
         height: auto;
         min-height: 90vh;
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
 
     .contact {
@@ -188,5 +190,10 @@
 
     .reviews-container {
         width: 100%;
+    }
+
+    #backToTop {
+        bottom: 20px;
+        right: 10px;
     }
 }
