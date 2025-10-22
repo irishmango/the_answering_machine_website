@@ -20,3 +20,14 @@
 @media (prefers-color-scheme: light) {}
 
 @media (prefers-contrast: more) {}
+
+/* Device-driven overrides (set by script.js on <html>) */
+/* On mobile devices, avoid fixed backgrounds to prevent jank/white gaps */
+.is-mobile .landing,
+.is-mobile .plot,
+.is-mobile .trailer,
+.is-mobile .team,
+.is-mobile .reviews,
+.is-mobile .contact {
+    background-attachment: scroll !important;
+}
