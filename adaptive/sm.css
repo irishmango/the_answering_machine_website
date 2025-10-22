@@ -5,6 +5,12 @@
         height: 100vh;
     }
 
+    .landing {
+        background-size: cover;
+        background-position: 40% center;
+        background-attachment: fixed;
+    }
+
     /* Hamburger menu for SM */
     .menu {
         position: absolute;

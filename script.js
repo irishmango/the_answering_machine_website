@@ -12,10 +12,20 @@
         const ua = (navigator.userAgent || navigator.vendor || window.opera || '').toLowerCase();
         const uaMobile = /android|iphone|ipad|ipod|blackberry|bb10|silk|kindle|iemobile|opera mini|mobile/i.test(ua);
 
-        // Heuristic: coarse pointer devices mobile/tablets
+        // Touch capability & iPadOS detection (avoid deprecated navigator.platform)
+        const touchPoints = (navigator.maxTouchPoints || 0);
+        const hasTouchStart = 'ontouchstart' in window;
+        // iPadOS Safari often reports a Macintosh-like UA; combine with touch points to detect
+        const isIpadOSLike = /macintosh|mac os x/i.test(ua) && touchPoints > 1;
+
+        // Heuristic: coarse pointer devices are often mobile/tablets
         const coarse = typeof window.matchMedia === 'function' && window.matchMedia('(pointer: coarse)').matches;
 
-        return uaMobile || coarse;
+        // Width-based soft fallback (helps DevTools emulation without UA/touch hints)
+        const vw = Math.min(window.innerWidth, window.innerHeight);
+        const smallViewport = vw <= 820; // covers most tablets in portrait and all phones
+
+        return uaMobile || isIpadOSLike || coarse || touchPoints > 0 || hasTouchStart || smallViewport;
     }
 
     function flagDevice() {

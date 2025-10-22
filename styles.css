@@ -21,7 +21,7 @@ body {
     align-items: center;
     background: url('assets/section_images/hero_image.webp');
     background-size: cover;
-    background-position: 80% center;
+    background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }

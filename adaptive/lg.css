@@ -1,7 +1,14 @@
 /* LG: 1024–1279px */
 @media (min-width: 1024px) and (max-width: 1279px) {
+
+    .landing {
+        background-size: cover;
+        background-position: 40% center;
+        background-attachment: fixed;
+    }
+
     h1 {
-        font-size: 3.8rem;
+        font-size: 3.6rem;
         margin-top: 280px;
         letter-spacing: 1.5px;
     }
