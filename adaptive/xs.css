@@ -75,7 +75,7 @@
     /* Zoom hero background for extra-small screens */
     .landing {
         background-size: cover;
-        background-position: center;
+        background-position: 40% center;
         background-attachment: fixed;
     }
 
