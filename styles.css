@@ -13,6 +13,7 @@ body {
 
 .landing {
     height: 100vh;
+    height: 100svh;
     display: flex;
     position: relative;
     flex-direction: column;
