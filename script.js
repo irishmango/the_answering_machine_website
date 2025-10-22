@@ -50,18 +50,47 @@
     window.isMobileDevice = isMobileDevice;
 })();
 
-// Back to Top Button
-const backToTop = document.getElementById('backToTop');
-window.addEventListener('scroll', () => {
-    if (window.scrollY > window.innerHeight * 0.8) {
-        backToTop.style.display = 'block';
-    } else {
-        backToTop.style.display = 'none';
+// Back to Top Button (avoid overlapping footer)
+(function () {
+    const backToTop = document.getElementById('backToTop');
+    if (!backToTop) return;
+    const footer = document.querySelector('.site-footer');
+    const BASE_BOTTOM = 20; // px
+    const BASE_RIGHT = 30; // px
+
+    function updateBackToTop() {
+        // Toggle visibility
+        if (window.scrollY > window.innerHeight * 0.8) {
+            backToTop.style.display = 'block';
+        } else {
+            backToTop.style.display = 'none';
+        }
+
+        // Default fixed placement
+        backToTop.style.position = 'fixed';
+        backToTop.style.right = BASE_RIGHT + 'px';
+
+        // If footer is visible, push the button up so it never overlaps
+        let bottom = BASE_BOTTOM;
+        if (footer) {
+            const rect = footer.getBoundingClientRect();
+            if (rect.top < window.innerHeight) {
+                const overlap = Math.max(0, window.innerHeight - rect.top);
+                bottom = BASE_BOTTOM + overlap;
+            }
+        }
+        backToTop.style.bottom = bottom + 'px';
     }
-});
-backToTop.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+
+    window.addEventListener('scroll', updateBackToTop);
+    window.addEventListener('resize', updateBackToTop);
+    // Initial position
+    updateBackToTop();
+
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+})();
 
 // Mobile hamburger menu
 (function () {
