@@ -288,6 +288,8 @@ video {
     border-radius: 6px;
     pointer-events: none;
     user-select: none;
+    display: none;
+    /* Hidden by default */
 }
 
 /* Footer */
