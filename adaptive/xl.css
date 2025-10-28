@@ -9,7 +9,7 @@
     .grid {
         grid-template-columns: repeat(5, 110px);
         grid-template-rows: repeat(2, 76px);
-        gap: 60px;
+        gap: 42px;
         padding: 60px 20px;
     }
 
